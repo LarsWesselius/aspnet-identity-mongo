@@ -14,7 +14,7 @@
 	public class RoleStore<TRole> : IRoleStore<TRole>, IQueryableRoleStore<TRole>
 		where TRole : IdentityRole
 	{
-		private readonly IMongoCollection<TRole> _Roles;
+		protected readonly IMongoCollection<TRole> _Roles;
 
 		public RoleStore(IMongoCollection<TRole> roles)
 		{
